@@ -259,7 +259,8 @@ function ProductList({ onHomeClick }) {
     };
 
     const handleAddToCart = (plant) => {
-        dispatch(addItem(plant));
+        const { name, image, cost } = plant;
+        dispatch(addItem({ name, image, cost }));
         setAddedToCart(prev => ({
             ...prev,
             [plant.name]: true
