@@ -36,7 +36,7 @@ body {
     color: white;
     font-size: 30px;
     text-decoration: none;
-   
+
 }
 
 /* Product Grid */
@@ -46,7 +46,58 @@ body {
     width: 100vw;
     align-items: center;
     justify-content: center;
+    padding: 20px;
 }
+
+.category-section {
+    margin-bottom: 40px;
+}
+
+.category-section h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.plants-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.plant-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+}
+
+.plant-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.plant-card button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.plant-card button.added {
+    background-color: #45a049;
+}
+
+.price {
+    font-weight: bold;
+    color: #4CAF50;
+    margin: 10px 0;
+}
+
 .product-list {
     display: flex;
     flex-wrap: wrap;
@@ -70,7 +121,7 @@ body {
     border-radius: 5px;
     text-align: center;
     position: relative;
-    
+
     gap: 20px;
 }
 
@@ -150,7 +201,7 @@ body {
     height: 70px;
     width: 70px;
     border-radius: 70%;
-    
+
 }
 
 .luxury {
@@ -186,7 +237,7 @@ body {
     border-left: none;
     border-right: none;
 
-    
+
 }
 /* Add Media Query for responsiveness */
 @media (max-width: 768px) {
@@ -210,11 +261,11 @@ body {
     transition-duration: 0.4s;
     cursor: pointer;
   }
-  
+
   .product-button:hover {
     background-color: #45a049;
   }
-  
+
   .product-button.added-to-cart {
     background-color: grey; /* Grey when product is added */
   }
@@ -224,7 +275,7 @@ body {
       max-width: calc(33.33% - 20px); /* Adjust max-width for 3 cards per row with 20px gap on medium screens */
     }
   }
-  
+
   @media (max-width: 768px) {
     .product-card {
       flex: 1 1 calc(50% - 20px); /* Adjust width for 2 cards per row with 20px gap on small screens */
@@ -234,18 +285,18 @@ body {
         flex-direction: column; /* Change flex direction to stack items vertically */
         align-items: center; /* Align items to the center of the container */
       }
-    
+
       .tag {
         margin-bottom: 20px; /* Add margin bottom for spacing */
         text-align: center; /* Align text to the center */
       }
-    
+
       .ul {
         display: flex; /* Set display to flex */
         flex-direction: column; /* Change flex direction to stack items vertically */
         gap: 10px; /* Add gap between items */
       }
-    
+
       .ul div {
         text-align: center; /* Align text to the center */
       }
